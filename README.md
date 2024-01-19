@@ -11,6 +11,6 @@ This theme was made using a custom base template, called Dédé, which follows t
 
 This is version 1.5 of the theme. It uses PHP as its main component, with some JavaScript (to register new blocks in Gutenberg, the header menu, and some sticky elements), and SCSS for the styling of the theme. 
 
-The theme also has a companion Gutenberg plugin called [Content Summary](https://github.com/JulienRevest/content-summary), which generates a title list for all the titles in a single, and .
+The theme also has a companion Gutenberg plugin called [Content Summary](https://github.com/JulienRevest/content-summary), which generates a title list for all the titles in a single, and adds social links if needed.
 
 This theme uses e-labo's new updating system, with Easy Digital Download. For security purposes, this functionnality has been removed.
