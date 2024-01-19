@@ -1,0 +1,41 @@
+/*:: BUTTONS ::*/
+/*******************************************************/
+
+button {
+	background: none;
+	border: none;
+}
+
+.action-button {
+	display: inline-block;
+	font-size: $f14;
+	padding: 12px 19px;
+
+	&.default {
+		background: transparent;
+		border: 1px solid $color-grey-dark;
+
+		&:active,
+		&:link {
+			color: $color-grey-dark;
+			text-decoration: none;
+		}
+
+		&:hover {
+			background: $color-grey-dark;
+			color: $color-white;
+		}
+	}
+}
+
+.buttons-zone {
+	margin-top: 30px;
+
+	&.align-right {
+		text-align: right;
+	}
+
+	&.align-center {
+		text-align: center;
+	}
+}

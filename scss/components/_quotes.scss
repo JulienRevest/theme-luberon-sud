@@ -1,0 +1,98 @@
+/*:: QUOTES ::*/
+/*******************************************************/
+
+blockquote.wp-block-quote {
+    border: 0;
+    margin: 60px auto;
+    padding: 44px 0;
+    position: relative;
+
+     p {
+        padding-left: 30px;
+        padding-left: 30px;
+
+        strong {
+            font-size: $f24;
+            line-height: $f24;
+        }
+
+        &:last-of-type {
+            padding-bottom: 0;
+        }
+     }
+
+    &:before,
+    &:after {
+        color: $color-purple;
+        display: block;
+        font-family: 'icomoon';
+        font-size: 23px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    &:before {
+        content: "\e91d";
+        left: 0;
+        top: 10px;
+    }
+    &:after {
+        bottom: 10px;
+        content: "\e91e";
+        left: auto;
+        right: 0;
+        top: auto;
+    }
+
+
+    /*:: CUSTOM STYLES ::*/
+    &.is-style-quote-small, 
+    &.is-style-quote-large {
+        border-bottom: 1px solid $color-purple;
+        border-top: 1px solid $color-purple;
+    }
+
+     &.is-style-quote-small {
+        max-width: 420px;
+        width: 100%;
+    }
+    
+    &.is-style-quote-large {
+        max-width: 610px;
+        width: 100%;
+    }
+
+    &.is-style-quote-image {
+        max-width: 610px;
+        width: 100%;
+
+        &:after {
+            display: none;
+        }
+        &:before {
+            font-size: 30px;
+            top: 40px;
+        }
+
+        p {
+            padding-bottom: 10px;
+            padding-left: 130px;
+
+            &:first-of-type {
+                padding-bottom: 0;
+            }
+
+            img {
+                border-radius: 50%;
+                height: 90px;
+                object-fit: cover;
+                overflow: hidden;
+                left: 15px;
+                position: absolute;
+                top: 50%;
+                transform: translate(0, -50%);
+                width: 90px;
+            }
+        }
+    }
+}

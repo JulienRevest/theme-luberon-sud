@@ -1,0 +1,336 @@
+/*:: PRINT ::*/
+/*******************************************************/
+
+@media print {
+	@page {
+		size: A4;
+	}
+	.admin-bar #header,
+	#header {
+		top: 0;
+		margin: 0;
+	}
+	html body {
+		font-size: 12px;
+		width: 210mm;
+		height: 297mm;
+
+		.noprint, .footer-top-arrow, #footer nav {
+			display: none;
+		}
+
+		input[type="radio"] {
+			-webkit-appearance: radio;
+			-moz-appearance: radio;
+			appearance: radio;
+		}
+		input[type="checkbox"] {
+			-webkit-appearance: checkbox;
+			-moz-appearance: checkbox;
+			appearance: checkbox;
+		}
+
+		/*:: HOMEPAGE ::*/
+		&.home #main .global-page {
+			.block-presentation {
+				margin-bottom: 0;
+			}
+
+			.list-articles-cards {
+				display: flex;
+				flex-wrap: nowrap;
+				width: 100vw;
+				article {
+					margin: 20px 10px;
+				}
+
+				.card-default {
+					width: calc(50% - 20px);
+					max-height: 414px;
+				}
+			}
+
+			.grids-s-w_i {
+				display: block;
+			}
+
+			.block-info-green {
+				.dae-shortcode-list {
+					display: flex;
+
+					.dae-card {
+						width: calc(33.33% - 20px);
+					}
+				}
+			}
+
+			/*:: SHORTCODE AGENDA ::*/
+			.grids-section.grids-is-advanced .grids-area {
+				.dae-shortcode-list {
+					display: flex;
+					flex-wrap: nowrap;
+					margin: 0;
+					width: 100vw;
+				}
+
+				&:has(.custom-homepage-title) {
+					width: 100vw;
+				}
+			}
+
+			.wp-block-where .wp-block-columns {
+				h2,
+				p {
+					color: $color-black;
+				}
+				:not(:first-child).wp-block-column {
+					display: none;
+				}
+			}
+			.wp-block-cover__image-background,
+			.wp-block-button,
+			.compo-button-custom {
+				display: none;
+			}
+		}
+
+		/*:: SINGLE/PAGE ::*/
+		&.single,
+		&.page {
+			#main {
+				display: block;
+				.grids-s-w_i {
+					display: flex;
+					flex-wrap: wrap;
+					.grids-area {
+						width: calc(50% - 20px);
+						.card-default {
+							width: calc(100% - 20px);
+						}
+					}
+				}
+				.cmplz-blocked-content-container {
+					display: none;
+				}
+				.page-header,
+				.admin-bar .page-header {
+					height: initial;
+					.global-page .round-button, .block-copyright {
+						display: none;
+					}
+				}
+
+				.global-page {
+					.col-aside,
+					.wp-block-buttons {
+						display: none;
+					}
+					.page-aside {
+						display: block;
+					}
+					.entry-content {
+						.wp-block-media-text {
+							display: flex;
+							flex-wrap: nowrap;
+						}
+
+						.block-info-green {
+							display: none;
+						}
+						.wp-block-image {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+
+		/*:: APIDAE ::*/
+		&.single {
+			main {
+				padding-top: 0;
+			}
+			.wp-block-cover {
+				margin-bottom: 0;
+			}
+			.dae-main.dae-archive .dae-filters.open,
+			.dae-main.dae-archive .dae-filters-shadow.open,
+			.dae-main.dae-single .dae-single-cols .dae-single-col-main .dae-gallery .dae-gallery-last,
+			.rando-aside {
+				display: none;
+			}
+			.dae-main.dae-single {
+				.dae-single-col-aside,
+				.dae-single-cols,
+				.dae-coords-bottom {
+					display: block;
+					color: $color-black;
+
+					.dae-single-col-aside-content {
+						display: block;
+						position: static;
+					}
+					.dae-coords {
+						max-width: 295px;
+						a {
+							color: $color-black;
+							padding: none;
+							text-align: left;
+						}
+						&.dae-coords-emel {
+							display: none;
+						}
+						.dae-tk-site:after {
+							content: " (" attr(href) ")";
+							font: inherit;
+						}
+					}
+				}
+				.dae-location {
+					display: none;
+				}
+				.dae-mails-bugs {
+					margin-bottom: 0;
+					a {
+						display: none;
+					}
+				}
+			}
+		}
+
+		/*:: RESULTATS APIDAE ::*/
+		.dae-main {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+		.dae-main.dae-archive {
+			.dae-button-filter {
+				display: none;
+			}
+			.dae-results-top {
+				page-break-after: avoid;
+			}
+			.dae-results {
+				page-break-before: avoid;
+				.dae-results-list {
+					display: flex;
+					width: 100vw;
+					.dae-card {
+						width: calc(50% - 20px);
+					}
+				}
+
+				#dae-overlay-map {
+					display: none;
+				}
+			}
+		}
+
+		/*:: ALL PAGES ::*/
+		#main {
+			.grids-s-w_i {
+				display: block;
+			}
+			.breadcrumb li a {
+				text-shadow: none;
+			}
+			.global-page {
+				.page-header,
+				.admin-bar .page-header {
+					height: 200px;
+
+					img {
+						display: none;
+					}
+
+					.global-page {
+						height: initial;
+						padding: 0;
+						.h1 {
+							color: $color-black;
+							text-decoration: none;
+							text-shadow: none;
+						}
+						.front-page-header-bottom, .wp-block-button {
+							display: none;
+						}
+					}
+				}
+				.summary-open-button {
+					display: none;
+				}
+				h1 {
+					text-shadow: none;
+				}
+				.card-default {
+					width: calc(50% - 20px);
+				}
+				.is-style-quote-large {
+					border-bottom: 2px solid #3e3e92;
+					border-top: 2px solid #3e3e92;
+				}
+				.entry-content .dae-shortcode-list {
+					display: flex;
+					.dae-card {
+						width: calc(33.33% - 20px);
+					}
+				}
+				.wp-block-cover {
+					box-shadow: none;
+					min-height: 0 !important; // Ne pas supprimer
+				}
+			}
+		}
+		header#header {
+			box-shadow: none;
+			.global-header {
+				box-shadow: none;
+				min-height: initial;
+			}
+			.navigation-open {
+				display: none;
+			}
+			&.sticky,
+			&:hover {
+				box-shadow: none;
+			}
+		}
+
+		/*:: FOOTER ::*/
+		#footer {
+			.global-footer {
+				.footer-sociaux-buttons,
+				.footer-info-contact .footer-info-newsletter,
+				.footer-info-contact .footer-info-carte {
+					display: none;
+				}
+
+				.footer-info-contact .footer-info-rencontre {
+					width: calc(50% - 20px);
+				}
+			}
+		}
+
+		header#header,
+		header#header.sticky,
+		&.admin-bar header#header.sticky {
+			border-top: none;
+			height: 90px;
+			margin: 0;
+			position: static;
+			top: 0;
+			.header-logo {
+				background-color: transparent;
+				height: 90px;
+				padding: 10px 0;
+				.header-logo-img {
+					color: $color-purple;
+				}
+			}
+			.menu-burger,
+			.header-options {
+				display: none;
+			}
+		}
+	}
+}

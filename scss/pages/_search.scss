@@ -1,0 +1,103 @@
+/*:: SEARCH ::*/
+/*******************************************************/
+.search-results,
+.search-no-results {
+	.page-aside {
+		@media (max-width: $width-large) {
+			flex-direction: column;
+		}
+	}
+
+	.col-aside {
+		margin-right: 0;
+
+		@media (min-width: $width-large) {
+			margin-left: 40px;
+			width: 300px;
+		 }
+
+		.col-aside-content {
+			@media (min-width: $width-medium) and (max-width: $width-large) {
+				display: flex;
+				margin: 0 -10px;
+			}
+			@media (min-width: $width-large) {
+				position: sticky;
+				top: 150px;
+			}
+		}
+
+		
+		.newsletter-info-content, 
+		.reservation-info-content {
+			background: $color-white;
+			box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+			margin-bottom: 25px;
+
+			@media (min-width: $width-medium) and (max-width: $width-large) {
+				margin: 10px;
+				width: calc(50% - 20px);
+			}
+			@media (max-width: $width-small) {
+				max-width: 100%;
+			}
+
+			h3, .is-style-title5 {
+				background-color: $color-green;
+				color: $color-white;
+				font-size: $f16;
+				font-weight: 700;
+				padding: 10px 15px;
+				text-transform: uppercase;
+
+				span {
+					display: inline-block;
+					font-size: 16px;
+					margin-right: 5px;
+				}
+			}
+
+			p {
+				padding: 0 15px 15px;
+			}
+		}
+	}
+
+	h1 {
+		font-style: normal;
+		font-weight: bold;
+		font-size: 26px;
+		line-height: 56px;
+	}
+
+	.results {
+		margin: 20px -10px 0;
+		display: flex;
+		flex-wrap: wrap;
+
+		.card-default {
+			width: calc(100% - 20px);
+
+			@media (min-width: $width-medium) { 
+				width: calc(33.33% - 20px);
+			}
+			@media (min-width: $width-medium) and (max-width: $width-wide) {
+				width: calc(50% - 20px);
+			}
+		}
+
+		.txt-no-results {
+			margin-left: 10px;
+			margin-right: 10px;
+			width: 100%;
+		}
+
+		article {
+			.card-content {
+				p {
+					max-height: 115px;
+				}
+			}
+		}
+	}
+}

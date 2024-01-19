@@ -1,0 +1,77 @@
+/*:: TYPOGRAPHY ::*/
+/*******************************************************/
+
+html {
+	font-family: "LibreFranklin", arial, sans-serif;
+}
+
+body {
+	font-family: "LibreFranklin", arial, sans-serif;
+	color: $color-grey-dark;
+	font-size: $f16;
+	font-weight: 400;
+	line-height: $f24;
+}
+
+a {
+	color: $color-black;
+	text-decoration: none;
+
+	&:hover {
+		color: lighten($color-black, 50%);
+	}
+	&:active {}
+	&:visited {}
+}
+
+p,
+ul li {
+	font-family: "LibreFranklin", arial, sans-serif;
+	font-size: $f16;
+	font-weight: 400;
+	line-height: $f24;
+}
+p {
+	padding-bottom: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "LibreFranklin", arial, sans-serif;
+	font-weight: 600;
+	line-height: 1;
+}
+
+strong {
+	font-weight: bold;
+}
+
+
+
+/*:: FONT FACE ::*/
+@font-face {
+    font-family: 'LibreFranklin';
+    src: url('../font/librefranklin-regular.woff2') format('woff2'),
+          url('../font/librefranklin-regular.woff') format('woff');
+	font-display: swap;
+	font-style: normal;
+    font-weight: 400;
+	unicode-range: U+000-5FF;
+}
+@font-face {
+    font-family: 'LibreFranklin';
+    src: url('../font/librefranklin-semibold.woff2') format('woff2'),
+          url('../font/librefranklin-semibold.woff') format('woff');
+	font-display: swap;
+	font-style: normal;
+    font-weight: 600;
+	unicode-range: U+000-5FF;
+}
+@font-face {
+    font-family: 'LibreFranklin';
+    src: url('../font/librefranklin-light.woff2') format('woff2'),
+          url('../font/librefranklin-light.woff') format('woff');
+	font-display: swap;
+	font-style: normal;
+    font-weight: 300;
+	unicode-range: U+000-5FF;
+}

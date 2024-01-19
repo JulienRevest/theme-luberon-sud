@@ -1,0 +1,395 @@
+/*:: FOOTER ::*/
+/*******************************************************/
+#footer  {
+	.global-footer {
+		margin: 0 auto;
+		max-width: 1280px;
+		padding-left: 15px;
+		padding-right: 15px;
+		width: 100%;
+	}
+
+	.footer-informations {
+		margin: 0 auto;
+
+		@media (min-width: $width-large) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		p {
+			max-width: 400px;
+		}
+
+		.footer-sociaux {
+			display: flex;
+			flex-direction: row;
+			margin-top: 80px;
+			margin-bottom: 30px;
+			max-width: 1440px;
+			justify-content: space-between;
+
+			@media (max-width: $width-small) {
+				align-items: center;
+				flex-direction: column;
+				margin: 0;
+			}
+			
+			@media (min-width: $width-small) and (max-width: $width-medium) {
+				align-items: center;
+				flex-wrap: nowrap;
+				flex-direction: row;
+				width: 100%;
+			}
+
+			.footer-sociaux-contact {
+				@media (max-width: $width-large) {
+					margin-bottom: 40px;
+					margin-top: 40px;
+				}
+				
+				@media (min-width: $width-small) and (max-width: $width-medium) {
+					width: 50%;
+				}
+
+				header {
+					color: $color-purple;
+					font-family: "LibreFranklin", arial, sans-serif;
+					font-weight: 400;
+					font-size: $f48;
+					line-height: $f48;
+					padding-bottom: 15px;
+
+					@media (max-width: $width-large) {
+						font-size: $f24;
+						line-height: $f24;
+					}
+				}
+
+				.footer-sociaux-buttons {
+					position: relative;
+
+					a {
+						display: inline-block;
+						margin-right: 15px;
+					}
+
+					.menu-social-button {
+						border: 2px solid $color-purple;
+						border-radius: 50%;
+						background-color: transparent;
+						color: $color-purple;
+						display: inline-block;
+						font-size: 30px;
+						height: 50px;
+						line-height: 47px;
+						padding: 0;
+						text-align: center;
+						transition: background-color 0.3s, color 0.3s;
+						width: 50px;
+
+						&:hover, &:focus {
+							background-color: $color-purple;
+							color: $color-white;
+						}
+					}
+				}
+			}
+
+			/*:: REMONTEE INSTA ::*/
+			.footer-sociaux-instagram {
+				margin-left: -15px;
+				margin-right: -15px;
+				max-width: 600px;
+
+				@media (min-width: $width-medium) {
+					margin-left: 0;
+					margin-right: 0;
+				}
+
+				@media (min-width: $width-small) and (max-width: $width-large) {
+					margin-bottom: 40px;
+					margin-top: 40px;
+					width: 50%;
+				}
+
+				.estgrm-feed {
+					display: flex;
+					flex-wrap: wrap;
+					overflow: hidden;
+					padding-left: 30px;
+
+					@media (max-width: $width-medium) {
+						padding-left: 0;
+					}
+					
+					picture {
+						width: 33.33%;
+
+						@media (min-width: $width-large) {
+							width: 25%;
+						}
+
+						@media (max-width: $width-large) {
+							&.estgrm-img-7,
+							&.estgrm-img-8 {
+								display: none;
+							}
+						}
+
+						img {
+							display: block;
+							height: 100%;
+							width: 100%;
+						}
+					}
+				}
+			}	
+		}
+
+		.footer-info-contact {
+			max-width: 1440px;
+			display: flex;
+			margin-top: $f24;
+			margin-bottom: $f24;
+			justify-content: space-between;
+
+			@media (min-width: $width-medium) {
+				align-items: center;
+				flex-direction: row;
+			}
+			@media (min-width: $width-medium) and (max-width: $width-large) {
+				flex-wrap: wrap;
+			}
+
+			header {
+				color: $color-purple;
+				font-family: "LibreFranklin", arial, sans-serif;
+				font-weight: 400;
+				font-size: $f33;
+				line-height: $f40;
+				padding-bottom: 15px;
+			}
+
+			p {
+				font-size: $f14;
+				line-height: $f18;
+			}
+
+			.footer-info-rencontre {
+				margin-bottom: $f24;
+				margin-top: $f24;
+
+				@media (min-width: $width-medium) and (max-width: $width-large) {
+					width: calc(50% - 48px);
+				}
+
+				@media (max-width: $width-medium) {
+					width: 50%;
+				}
+
+				@media (max-width: $width-small) {
+					width: 400px;
+				}
+			}
+
+			.footer-info-newsletter {
+				margin-bottom: $f24;
+				margin-top: $f24;
+
+				@media (min-width: $width-medium) and (max-width: $width-large) {
+					width: calc(50% - 48px);
+				}
+
+				@media (max-width: $width-medium) {
+					width: 50%;
+				}
+
+				@media (max-width: $width-small) {
+					width: 400px;
+				}
+			}
+
+			.footer-info-carte {
+				height: 301px;
+				margin: $f24;
+				width: 386px;
+
+				@media (min-width: $width-medium) and (max-width: $width-large) {
+					text-align: center;
+					width: calc(100% - 48px);
+				}
+
+				img {
+					height: 301px;
+					width: 386px;
+				}
+			}
+		}
+	}
+
+	nav {
+		background-color: $color-purple;
+
+		> div {
+			margin: 0 auto;
+			max-width: 1320px;
+		}
+
+		.menu {
+			display:flex;  
+			justify-content: flex-start;
+			flex-wrap: wrap;
+			list-style:none;
+			margin: 0 auto;
+			max-width: 1440px;
+			padding: 20px 15px;
+
+			.menu-item {
+				a {
+					color: $color-white;
+					display: inline-block;
+					font-size: $f14;
+					margin: 5px 0;
+				}
+
+				&::after {
+					content: '-';
+					color: $color-white;
+					margin-left: $f10;
+					margin-right: $f10;
+				}
+
+				&:last-child::after {
+					content: '';
+				}
+			}
+		}
+	}
+}
+
+.footer-top-arrow { 
+	display: none;
+	left: calc(100% - 80px);
+	position: sticky;
+	top: calc(100vh - 150px);
+	width: 42px;
+
+	@media (min-width: $width-medium) {
+		display: block;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+	.return-top{
+		background-color: $color-white;
+		border-color: $color-purple;
+		border-radius: 50%;
+		height: 42px;
+		line-height: 42px;
+		position: relative;
+		text-align: center;
+		width: 42px;
+		z-index: 1;
+
+		&:before {
+			color: $color-purple;
+			content: "\e91f";
+			display: block;
+			font-family: 'icomoon';
+			font-size: 42px;
+			left: 0;
+			position: absolute;
+			top: 0;
+		}
+		.arrow-bottom {
+			height: 8px;
+			left:50%;
+			margin-top: -3px;
+			position: absolute;
+			top:50%;
+			transform:translate(-50%, 0%)rotate(135deg);
+			width: 8px;
+
+			&:before { 
+				border-left: 2px solid $color-purple;
+				border-bottom: 2px solid $color-purple;
+				content: '';
+				display: block;
+				height:100%;
+				position: absolute;
+				width:100%;
+			}
+		}
+	}
+}
+
+
+/*:: MOBILE ::*/
+#footer  {
+	@media (max-width: $width-medium) {
+		.footer-informations {
+			max-height: initial;
+			align-items: center;
+
+			.footer-sociaux {
+
+				.footer-sociaux-contact {
+					header { 
+						font-size: $f28;
+					}
+				}
+			}
+
+			.footer-info-contact {
+				flex-wrap: wrap;
+				justify-content: center;
+
+				.footer-info-rencontre {
+					header {
+						font-size: $f28;
+					}
+				}
+
+				.footer-info-newsletter {
+					header {
+						font-size: $f28;
+					}
+				}
+
+				.footer-info-carte {
+					display: none;
+				}
+			}
+		}
+		
+		nav {
+			.menu {
+				flex-wrap: wrap;
+				flex-direction: column;
+
+				.menu-item {
+					&::after {
+						content: '';
+					}
+				}
+			}
+		}
+
+		.footer-top-arrow {
+			display: none;
+		}
+	}
+
+	@media (max-width: $width-large) {
+		.footer-informations {
+			.footer-info-contact {
+				.footer-info-carte {
+					display: none;
+				}
+			}
+		}
+	}
+}

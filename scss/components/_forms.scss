@@ -1,0 +1,243 @@
+/*:: FORMS ::*/
+/*******************************************************/
+
+button {
+	cursor: pointer;
+}
+
+input,
+select,
+textarea {
+	border: 1px solid $color-black;
+	color: lighten($color-black, 60%);
+	font-family: inherit;
+	display: inline-block;
+	padding: 7px 12px;
+}
+
+input[type="submit"],
+button.submit {
+	-webkit-appearance: none;
+	background: none;
+	border: 0;
+	cursor: pointer;
+	display: inline-block;
+	font-family: inherit;
+	line-height: 1;
+	margin-top: 20px;
+	text-decoration: none;
+	width: auto;
+}
+
+.gfield_error {
+	.gfield_validation_message {
+		background: lighten($color-red, 34%);
+		border: 1px solid $color-red;
+		color: $color-red;
+		font-size: $f14;
+		margin-top: 8px;
+		padding: 10px 20px;
+	}
+}
+
+.gform_validation_errors {
+	margin: 60px auto 30px;
+	max-width: 915px;
+
+	.gform_submission_error {
+		background: lighten($color-red, 34%);
+		border: 1px solid $color-red;
+		color: $color-red;
+		font-size: $f14;
+		font-weight: normal;
+		line-height: $f18;
+		padding: 10px 20px;
+	}
+}
+
+
+.ginput_complex {
+	@media (min-width: $width-medium) {
+		display: flex;
+		justify-content: space-between;
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
+	span {
+		display: block;
+		width: 100%;
+
+		@media (min-width: $width-medium) {
+			margin: 0 10px;
+		}
+
+		input {
+			display: block;
+			width: 100%;
+		}
+
+		label {
+			display: block;
+			font-size: $f14;
+			margin-top: 5px;
+			width: 100%;
+		}
+	}
+}
+
+.gfield {
+	margin-bottom: 20px;
+}
+
+.gform_validation_container {
+	display: none;
+}
+
+.ginput_container_number {
+	input {
+		width: 280px;
+	}
+}
+
+.gfield_required {
+	color: $color-red;
+	font-size: $f14;
+	font-style: italic;
+	margin-left: 2px;
+}
+
+
+/*:: CONTACT FORM ::*/
+.contact-form {
+	margin: 60px auto 0;
+	max-width: 915px;
+
+	legend {
+		display: block;
+	}
+
+	.gfield_label {
+		display: block;
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+
+	input[type="text"], input[type="tel"], input[type="email"] {
+		display: block;
+		height: 36px;
+		line-height: 36px;
+		width: 100%;
+	}
+	textarea {
+		display: block;
+		width: 100%;
+	}
+	
+
+	.gfield_consent_label {
+		a {
+			&:link {
+				color: $color-purple;
+				text-decoration: underline;
+			}
+			&:visited {
+				color: $color-grey-dark;
+			}
+			&:hover {
+				color: $color-purple;
+				text-decoration: none;
+			}
+			&:active {
+				color: $color-purple;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.gform_footer .gform_button {
+		background: transparent;
+		border: 4px solid $color-purple;
+		color: $color-purple;
+		font-size: $f20;
+		font-weight: 600;
+		line-height: 1;
+		padding: 15px 30px;
+		transition: background 0.3s, color 0.3s, border-color 0.3s, opacity 0.3s;
+
+		&:hover {
+			background: $color-purple;
+			border-color: transparent;
+			color: $color-white;
+		}
+
+		&.button:disabled {
+			opacity: 0.2;
+			cursor: initial;
+
+			&:hover {
+				background: transparent;
+				border-color: $color-purple;
+				color: $color-purple;
+			}
+		}
+	}
+}
+
+
+/*:: NEWSLETTER FORM ::*/
+.newsletter-form {
+	background-color: $color-purple;
+	padding: 20px;
+	
+	legend,
+	label {
+		color: $color-white;
+
+		&.gfield_label {
+			font-weight: 600;
+		}
+	}
+	
+	fieldset input, .ginput_container input {
+		border-color: transparent;
+		color: $color-black;
+	}
+
+	.gform_rgpd_link {
+		color: $color-white;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.gform_footer .gform_button {
+		background: transparent;
+		border: 4px solid $color-white;
+		color: $color-white;
+		font-size: $f20;
+		font-weight: 600;
+		line-height: 1;
+		padding: 15px 30px;
+		transition: background 0.3s, color 0.3s, border-color 0.3s, opacity 0.3s;
+
+		&:hover {
+			background: $color-white;
+			border-color: transparent;
+			color: $color-purple;
+		}
+
+		&.button:disabled {
+			opacity: 0.2;
+			cursor: initial;
+
+			&:hover {
+				background: transparent;
+				border-color: $color-white;
+				color: $color-white;
+			}
+		}
+	}
+}

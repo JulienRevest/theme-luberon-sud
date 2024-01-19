@@ -1,0 +1,44 @@
+/*:: SITEMAP ::*/
+/*******************************************************/
+#main .global-page 
+.wrap-html-sitemap {
+    a {
+        font-size: $f14;
+    }
+    .sp-wrap-cpt {
+        padding-bottom: 20px;
+        padding-top: 20px;
+
+        & > ul {
+            @media (min-width: $width-medium) {
+                column-count: 2;
+                column-gap : 30px;
+            }
+            @media (min-width: $width-large) {
+                column-count: 3;
+                column-gap : 40px;
+            }
+        }
+
+        & ul:not(:first-child) {
+            padding-left: 10px;
+        }
+    }
+    li {
+        padding-bottom: 2px;
+        padding-top: 2px;
+        break-inside: avoid-column;
+    }
+    h2, h3, h4, h5, h6 {
+        padding-bottom: 0;
+    }
+    h2 {
+        font-size: 1.375rem;
+    }
+    h3 {
+        font-size: 1rem;
+        &:not(:first-child) {
+            padding-top: 5px;
+        }
+    }
+}

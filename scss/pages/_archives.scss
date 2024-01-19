@@ -1,0 +1,44 @@
+/*:: ARCHIVES ::*/
+/*******************************************************/
+
+/*:: NEWS ::*/
+.cards-listing-news {
+    display: flex;
+    padding-top: 20px;
+    flex-wrap: wrap;
+
+    @media (max-width: $width-medium) {
+        margin: -10px;
+    }
+
+    .card-default {
+        height: 414px;
+        width: calc(100% - 20px);
+
+        @media (min-width: $width-medium) {
+            width: calc(50% - 20px);
+        }
+        @media (min-width: $width-large) {
+            width: calc(33.33% - 20px);
+        }
+        @media (min-width: $width-wide) {
+            width: calc(25% - 20px);
+        }
+
+        p {
+            padding-bottom: 0;
+        }
+
+        &.format-landscape {
+            width: calc(100% - 20px);
+
+            @media (min-width: $width-large) {
+                width: calc(66.66% - 20px);
+            }
+            @media (min-width: $width-wide) {
+                width: calc(50% - 20px);
+            }
+        }
+    }
+}
+    

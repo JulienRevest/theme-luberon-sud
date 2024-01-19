@@ -1,0 +1,94 @@
+/*:: PAGINATION ::*/
+/*******************************************************/
+#dae_pagination{
+    border: none;
+    &.dae-pagination {
+        margin: 3em 0;
+
+        @media (min-width: $width-large) {
+            margin: 4em 0 0;
+        }
+
+        span.page-numbers {
+            &.current {
+                background: $color-purple;
+            }
+        }
+
+        a {
+            color: $color-purple;
+
+            &:hover {
+                background: lighten($color-purple, 55%);
+                color: $color-purple;
+            }
+        }
+    }
+}
+
+
+#dae_pagination.dae-pagination a.page-numbers, 
+#dae_pagination.dae-pagination a.page-numbers.prev, 
+#dae_pagination.dae-pagination a.page-numbers.next, 
+#dae_pagination.dae-pagination span.page-numbers, 
+#dae_pagination.dae-pagination span.page-numbers.prev, 
+#dae_pagination.dae-pagination span.page-numbers.next {
+    color: $color-purple;
+    padding: 8px 12px;
+
+    @media (min-width: $width-large) {
+        padding: 8px 14px;
+    }
+    &.current{
+        color: $color-white;
+        margin-right: 6px;
+	    padding: 8px 12px;
+    }
+}
+
+.pagination {
+	margin: 30px 0;
+	text-align: center;
+
+    @media (min-width: $width-wide) {
+        margin: 30px 0 60px;
+    }
+
+	.page-numbers {
+        margin: 0;
+        padding: 0;
+
+		li {
+			display: inline-block;
+
+            @media (max-width: $width-medium) {
+                span, a.page-numbers {
+                    padding: 4px 4px;
+                }
+            }
+
+			.current {
+				background: $color-purple;
+				color: $color-white;
+				margin-right: 6px;
+				padding: 8px 12px;
+			}
+			
+			a {
+				background: $color-white;
+				margin-right: 6px;
+				padding: 8px 12px;
+
+                &:link {
+                    color: $color-purple;
+                    text-decoration: none;
+                }
+
+				&:hover {
+					background: #f0f0f9;
+                    color: $color-purple;
+                }
+			}
+		}
+	}
+}

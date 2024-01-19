@@ -1,0 +1,73 @@
+/*:: VARIABLES ::*/
+/*******************************************************/
+
+/*:: COLORS ::*/
+$color-black: #000; // @note: noir
+$color-white: #ffffff; // @note: blanc
+$color-bg: #e5e5e5; // @note: fond gris
+$color-red: #ED6955; // @note: rouge
+$color-purple: #3E3E92; // @note: purple
+$color-grey-dark: #3D3935; // @note: grey dark
+$color-grey: #828282; // @note: grey light
+$color-orange: #F7A418; // @note  orange
+$color-brown: #866015; // @note  brown
+$color-green: #118471; // @note  green
+
+
+
+/*:: GUTENBERG COLOR OPTIONS 
+	see inc/back.php elabo_theme_block_colors() for color palette
+::*/
+$colors: ( color-black, #000 ),
+	( color-white, #fff ),
+	( color-bg, #e5e5e5 ),
+	( color-red, #ED6955 ),
+	( color-purple, #3E3E92 ),
+	( color-grey-dark, #3D3935 ),
+	( color-orange, #F7A418 ),
+	( color-brown, #866015 ),
+	( color-green, #118471 );
+
+@each $name, $color in $colors {
+	.entry-content,
+	.is-root-container {
+		.has-#{$name}-color {
+			color: $color;
+		}
+		.has-#{$name}-background-color {
+			background-color: $color;
+		}
+	}
+}
+
+
+/*:: BREAKPOINTS ::*/
+$width-small: 480px;
+$width-small-extend: 680px;
+$width-medium: 768px;
+$width-large: 960px;
+$width-wide: 1200px;
+
+
+/*:: FONT SIZE ::*/
+$f10: 0.625rem;
+$f12: 0.75rem;
+$f13: 0.8125rem;
+$f14: 0.875rem;
+$f16: 1rem;
+$f17: 1.0625rem;
+$f18: 1.125rem;
+$f19: 1.1875rem;
+$f20: 1.25rem;
+$f21: 1.3125rem;
+$f23: 1.4375rem;
+$f24: 1.5rem;
+$f28: 1.75rem;
+$f33: 2.0625rem;
+$f35: 2.1875rem;
+$f38: 2.375rem;
+$f40: 2.5rem;
+$f48: 3rem;
+$f56: 3.5rem;
+$f57: 3.5625rem;
+$f64: 4rem;

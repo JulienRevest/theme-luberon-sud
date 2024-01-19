@@ -1,0 +1,43 @@
+[class^="icon-"], [class*=" icon-"] {
+    font-size: 22px;
+    margin: 0 auto;
+}
+
+.acf-field[data-name="card_icon"],
+.acf-field[data-name="icon_class"] {
+    .acf-input {
+        .acf-radio-list {
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                margin: 4px;
+                width: 30%;
+
+                label {
+                    align-items: center;
+                    border: 1px solid #8c8f94;
+                    border-radius: 4px;
+                    display: flex;
+                    padding: 10px 5px;
+                    text-align: center;
+
+                    input {
+                        left: -9999px;
+                        opacity: 0;
+                        position: absolute;
+                    }
+					
+                    &:hover,
+                    &.selected {
+                        background: #3E3E92;
+                        border-color: #3E3E92;
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import 'base/icomoon';

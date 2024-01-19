@@ -1,0 +1,243 @@
+/*:: CARDS ::*/
+/*******************************************************/
+.card-default {
+	background: $color-white;
+	box-shadow: 0 4px 10px rgba($color-black, 0.15);
+	// height: 100%;
+	margin: 10px;
+	overflow: hidden;
+	position: relative;
+	transition: box-shadow 0.2s;
+
+	@media (min-width: $width-medium) {
+		min-height: 414px;
+	}
+
+	figure {
+		height: 212px;
+		margin: 0;
+		overflow: hidden;
+
+		@media (min-width: $width-medium) and (max-width: $width-large) {
+			height: 165px;
+		}
+		
+		img {
+			display: block;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.4s;
+			transform: rotate(0.01deg);
+			width: 100%;
+		}
+	}
+
+	.card-content {
+		background: $color-white;
+		max-width: 400px;
+		padding: 22px 15px;
+
+		.card-title {
+			display: flex;
+			flex-wrap: nowrap;
+
+			h2, h3 {
+				flex-grow: 1;
+				font-size: $f16;
+				font-weight: 700;
+				line-height: $f24;
+				padding-bottom: 10px;
+				text-transform: none;
+			}
+
+			span {
+				color: $color-purple;
+				flex-grow: 0;
+				flex-shrink: 0;
+				font-size: 20px;
+				margin-right: 8px;
+			}
+		}
+
+		p {
+			color: $color-grey-dark;
+		}
+	}
+
+	&.format-landscape {
+		figure {
+			@media (min-width: $width-large) {
+				height: 100%;
+			}
+		}
+
+		.card-content {
+			@media (min-width: $width-large) {
+				bottom: 0;
+				position: absolute;
+			}
+		}
+	}
+
+	&:hover {
+		box-shadow: 0 4px 10px 1px rgba($color-black, 0.3);
+		cursor: pointer;
+
+		figure {
+			img {
+				transform: scale(1.06);
+			}
+		}
+
+		.card-content {
+			.card-title {
+				a {
+					color: $color-purple;
+				}
+			}
+		}
+	}
+}
+
+.grids-is-advanced {
+	>.grids-s-w_i {
+		.dae-entities-list{
+			height: 100%;
+		}
+		>div.grids-area {
+			height: 100%;
+
+			@media (max-width: $width-medium) {
+				flex-wrap: wrap;
+			}
+
+			&.size-large {
+				@media (min-width: $width-large) {
+					height: 145%;
+				}
+
+				.wp-block-group {
+					box-shadow: 0 4px 10px rgba($color-black, 0.15);
+					height: 100%;
+					margin: 10px;
+					padding: 20px;
+				}
+			}
+			.wp-block-group.size-large {
+				box-shadow: 0 4px 10px rgba($color-black, 0.15);
+				height: 100%;
+				margin: 10px;
+				padding: 20px;
+
+				@media (max-width: $width-medium) {
+					min-height: 414px;
+					width: calc(100% - 20px);
+				}
+			}
+
+			.wp-block-cover {
+				@media (min-width: $width-small) and (max-width: $width-medium) {
+					min-height: 374px;
+				}
+				@media (min-width: $width-medium) and (max-width: $width-large) {
+					min-height: 414px;
+				}
+			}
+		}
+	}
+}
+
+.list-villages-cards, 
+.list-articles-cards {
+	@media (min-width: $width-medium) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.card-default {
+		@media (min-width: $width-medium) and (max-width: $width-large) {
+			width: calc(50% - 20px);
+		}
+		@media (min-width: $width-large) {
+			width: calc(25% - 20px);
+		}
+	}
+}
+
+
+.list-articles-cards {
+	margin-left: -15px;
+	margin-right: -15px;
+
+	.card-default {
+		margin: 20px 10px;
+		max-width: none;
+		width: calc(100% - 20px);
+
+		@media (min-width: $width-medium) {
+			margin: 10px;
+			width: calc(50% - 20px);
+		}
+		@media (min-width: $width-large) {
+			margin: 10px;
+			width: calc(33.33% - 20px);
+		}
+		@media (min-width: $width-wide) {
+			margin: 10px;
+			width: calc(25% - 20px);
+		}
+
+		figure {
+			height: 212px;
+
+			picture {
+				height: 100%;
+
+				img {
+					display: block;
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+
+.home {
+	.entry-content {
+		.list-articles-cards {
+			margin: 0;
+
+			.card-default {
+				@media (min-width: $width-wide) {
+					margin: 10px;
+					width: calc(33.33% - 20px);
+				}
+				
+				&:first-child {
+					width: calc(100% - 20px);
+
+					@media (min-width: $width-medium) {
+						width: calc(50% - 20px);
+					}
+					@media (min-width: $width-large) {
+						width: calc(66.66% - 20px);
+					}
+					
+					figure {
+						@media (min-width: $width-large) {
+							height: 100%;
+						}
+					}
+		
+					.card-content {
+						@media (min-width: $width-large) {
+							bottom: 0;
+							position: absolute;
+						}
+					}
+				}
+			}
+		}
+	}
+}

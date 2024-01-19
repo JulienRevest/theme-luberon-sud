@@ -1,0 +1,13 @@
+/*:: ENTRY CONTENT ::*/
+/*******************************************************/
+
+.entry-content {
+	@import '_gutenberg.scss';
+	
+	&:after {
+		content: "";
+		display: block;
+		height: 1px;
+		clear: both;
+	}
+}
